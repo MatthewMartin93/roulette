@@ -20,6 +20,7 @@ for x in range(1, int(chambers) + 1):
         print("You just got served!")
         print("Game Over")
         i = random.randint(1, 1000)
+	print(i)
         for x in range(0, i):
           os.startfile("C:\Windows\System32\calc.exe")
         start_again = input("Do you want to start again? (y/n): ")
